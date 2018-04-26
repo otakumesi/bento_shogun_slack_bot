@@ -4,15 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-slack = "*"
 requests-html = "*"
 "boto3" = "*"
-slackclient = "*"
 requests = "*"
 
 [dev-packages]
 neovim = "*"
 ipython = "*"
+lambda-uploader = "*"
 
 [requires]
 python_version = "3.6"
