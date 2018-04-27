@@ -103,3 +103,6 @@ ENV/
 
 # AWS
 lambda.json
+
+# ENV
+.env

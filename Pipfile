@@ -4,14 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-requests-html = "*"
 "boto3" = "*"
 requests = "*"
+requests-html = "*"
+flask = "*"
 
 [dev-packages]
-neovim = "*"
-ipython = "*"
 lambda-uploader = "*"
+python-lambda-local = "*"
+neovim = "*"
+jedi = "*"
 
 [requires]
 python_version = "3.6"
