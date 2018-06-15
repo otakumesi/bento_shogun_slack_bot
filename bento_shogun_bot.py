@@ -9,7 +9,7 @@ SLACK_URL = os.environ['SLACK_URL']
 
 
 def post_bento_list_to_slack(bento_list):
-    MESSAGE = '今日の弁当将軍をお知らせします！ :tada:'
+    MESSAGE = '今日の弁当将軍をお知らせします！ :tada:  http://bento-shogun.jp/menu/today/'
     
     attachments = [{
         "color": "#e4574e",
