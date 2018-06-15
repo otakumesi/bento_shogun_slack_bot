@@ -7,10 +7,12 @@ name = "pypi"
 "boto3" = "*"
 requests = "*"
 requests-html = "*"
+feedparser = "*"
 
 [dev-packages]
 neovim = "*"
 jedi = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.6"
