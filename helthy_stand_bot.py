@@ -3,7 +3,6 @@ import requests
 import json
 import os
 import feedparser
-from IPython import embed
 
 SLACK_URL = os.environ['SLACK_URL']
 
@@ -38,6 +37,5 @@ def get_bento_list():
     return  bentos
 
 if __name__=='__main__':
-    get_bento_list()
     bento_list = get_bento_list()
     post_bento_list_to_slack(bento_list)
