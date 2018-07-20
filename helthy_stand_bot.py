@@ -28,9 +28,19 @@ def get_bento_list():
     url = 'https://www.healthy-stand-japan.com/blog/2018/7/17'
     session = requests_html.HTMLSession()
     resp = session.get(url)
-    brands = resp.html.find('h2')[0:2]
     names = resp.html.find('h3')[0:2]
-    imgs = resp.html.find('p img')[0:2]
+
+    brands = []
+    imgs = []
+    img_flag = 0
+
+    for ele in resp.html.find('h2, p'):
+        if 'id' in ele.attrs:
+            brands.append(ele)
+            img_flag = 1
+        if len(ele.find('img')) > 0 and img_flag == 1:
+            imgs.append(ele.find('img')[0])
+            img_flag = 0
 
     bentos = [
         {"img": img.attrs['src'], "name": name.text + ' (' + brand.text + ')'}
