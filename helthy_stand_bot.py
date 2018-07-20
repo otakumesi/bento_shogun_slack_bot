@@ -25,7 +25,6 @@ def post_bento_list_to_slack(bento_list):
 def get_bento_list():
     rss = feedparser.parse('https://www.healthy-stand-japan.com/blog/feed.rss')
     url = rss['items'][0]['link']
-    url = 'https://www.healthy-stand-japan.com/blog/2018/7/17'
     session = requests_html.HTMLSession()
     resp = session.get(url)
     names = resp.html.find('h3')[0:2]
