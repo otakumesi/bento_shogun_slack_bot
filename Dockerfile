@@ -50,7 +50,6 @@ COPY .env /tmp/.env
 ADD . /tmp/bot
 
 RUN echo 'SHELL=/bin/bash' >> /etc/crontab
-RUN echo '* 2 * * 1-5 root source /tmp/.env;/usr/local/bin/python3 /tmp/bot/bento_shogun_bot.py >>/tmp/bot.log 2>>/tmp/bot-err.log' >> /etc/crontab
 RUN echo '* 2 * * 1-5 root source /tmp/.env;/usr/local/bin/python3 /tmp/bot/helthy_stand.py >>/tmp/bot.log 2>>/tmp/bot-err.log' >> /etc/crontab
 
 CMD ["/usr/sbin/cron", "start", "&&", "tail", "-f", "/dev/null"]
