@@ -3,7 +3,9 @@ import requests
 import json
 import os
 import feedparser
+from dotenv import load_dotenv
 
+load_dotenv()
 SLACK_URL = os.getenv('SLACK_URL')
 
 def post_bento_list_to_slack(bento_list):
