@@ -4,7 +4,7 @@ import json
 import os
 import feedparser
 
-SLACK_URL = os.environ['SLACK_URL']
+SLACK_URL = os.getenv('SLACK_URL')
 
 def post_bento_list_to_slack(bento_list):
     MESSAGE = '今日のヘルシースタンドをお知らせします！ :tada: https://www.healthy-stand-japan.com/blog'
